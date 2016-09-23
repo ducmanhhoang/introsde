@@ -1,5 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.text.SimpleDateFormat;
+import java. util.Date;
 
 import pojos.HealthProfile;
 import pojos.Person;
@@ -7,55 +9,65 @@ import pojos.Person;
 
 public class HealthProfileReader {
 	
-	public static Map<String,Person> database = new HashMap<String,Person>();
+	public static long personId = 0;
+	public static Map<Long,Person> database = new HashMap<Long,Person>();
 	
-	static
-    {
-    	Person pallino = new Person();
-		Person pallo = new Person("Pinco","Pallo");
-		HealthProfile hp = new HealthProfile(68.0,1.72);
-		Person john = new Person("John","Doe",hp);
-		
-		database.put(pallino.getFirstname()+" "+pallino.getLastname(), pallino);
-		database.put(pallo.getFirstname()+" "+pallo.getLastname(), pallo);
-		database.put(john.getFirstname()+" "+john.getLastname(), john);
-    }
-	/**
-	 * The health profile reader gets information from the command line about
-	 * weight and height and calculates the BMI of the person based on this 
-	 * parameters
-	 * 
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		//initializeDatabase();
-		int argCount = args.length;
-		if (argCount == 0) {
-			System.out.println("I cannot create people out of thing air. Give me at least a name and lastname.");
-		} else if (argCount < 2) {
-			System.out.println("Are you sure you gave me a first and lastname?");
-		} else if (argCount == 2) {
-			String fname = args[0];
-			String lname = args[1];
-			// read the person from the DB
-			Person p= database.get(fname+" "+lname);
-			if (p!=null) { 
-				System.out.println(fname+" "+lname+"'s health profile is: "+p.gethProfile().toString());
-			} else {
-				System.out.println(fname+" "+lname+" is not in the database");
-			}
-		}
-		// add the case where there are 3 parameters, the third being a string that matches "weight", "height" or "bmi"
+	public void createPerson(String firstName, String lastName, Date birthDate) {
+		Person person = new Person(firstName, lastName, birthDate);
+		personId = personId + 1;
+		database.put(personId, person);
 	}
 	
-	//public static void initializeDatabase() {
-	//	Person pallino = new Person();
-	//	Person pallo = new Person("Pinco","Pallo");
-	//	HealthProfile hp = new HealthProfile(68.0,1.72);
-	//	Person john = new Person("John","Doe",hp);
-	//	
-	//	database.put(pallino.getFirstname()+" "+pallino.getLastname(), pallino);
-	//	database.put(pallo.getFirstname()+" "+pallo.getLastname(), pallo);
-	//	database.put(john.getFirstname()+" "+john.getLastname(), john);
-	//}
+	public void displayHealthProfile(long personId) {
+		Person person = database.get(personId);
+		System.out.println("Name: " + person.getFirstname() + " " + person.getLastname());
+		System.out.println("Date of birth: " + person.getBirthDate());
+		System.out.println("Health profile: " + person.gethProfile().toString());
+	}
+	
+	public void updateHealthProfile(long personId, double height, double weight) {
+		Person person = database.get(personId);
+		person.sethProfile(new HealthProfile(height, weight));
+		database.remove(personId);
+		database.put(personId, person);
+	}
+	
+	public static void main(String[] args) {
+		try {
+			HealthProfileReader app = new HealthProfileReader();
+			//Create some peoples
+			String expectedPattern = "MM/dd/yyyy";
+		    SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
+		    String txtdate = "09/22/1988";
+		    Date date = formatter.parse(txtdate);
+			app.createPerson("Person", "First", date);
+			
+			txtdate = "03/21/1991";
+			date = formatter.parse(txtdate);
+			app.createPerson("Person", "Second", date);
+			
+			txtdate = "02/12/1992";
+			date = formatter.parse(txtdate);
+			app.createPerson("Person", "Third", date);
+			
+			txtdate = "05/17/1993";
+			date = formatter.parse(txtdate);
+			app.createPerson("Person", "Fourth", date);
+			
+			txtdate = "07/26/1996";
+			date = formatter.parse(txtdate);
+			app.createPerson("Person", "Fiveth", date);
+			
+			//Print info of a person.
+			app.displayHealthProfile(4);
+			
+			//Update a health profile of a person
+			app.updateHealthProfile(4, 1.90, 90);
+			
+			//Print info of a person.
+			app.displayHealthProfile(4);
+		} catch (Exception e) {
+			System.err.println(e);
+		}
+	}
 }

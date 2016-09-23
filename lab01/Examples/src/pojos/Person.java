@@ -3,14 +3,18 @@
 // If a class is in another package, in other to see it, you need to import it
 package pojos;
 
+import java.util.Date;
+
 // This is a typical Java Class. 
 public class Person {
 
 	// As with any other object oriente language, classes have attributes (i.e. the properties of the class). 
 	// Each attribute is in turn of another class
+	private long personId;
 	private String firstname;	// this is an attribute of the class String, and it is 'private'
 								// private attributes are only accesible inside the object
 	private String lastname;	// this is an attribute of the class String
+	private Date birthDate;
 	private HealthProfile hProfile;	// this is an attribute of the class HealthProfile 
 	
 	// constructors in java are used to create an object of the class 
@@ -31,7 +35,13 @@ public class Person {
 		this.lastname="Pallino";
 		this.hProfile=new HealthProfile();
 	}
-
+	
+	public Person(String firstname, String lastname, Date birthDate) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.birthDate = birthDate;
+		this.hProfile = new HealthProfile();
+	}
 	// classes have methods, which are basically pieces of programs that can be executed on objects of the class
 	// this dummy class, has only 'accesor' methods (i.e. methods to access its properties, which are all private)
 	public String getFirstname() {
@@ -52,4 +62,18 @@ public class Person {
 	public void sethProfile(HealthProfile hProfile) {
 		this.hProfile = hProfile;
 	}
+	public long getPersonId() {
+		return personId;
+	}
+	public void setPersonId(long personId) {
+		this.personId = personId;
+	}
+	public Date getBirthDate() {
+		return birthDate;
+	}
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+	
+	
 }
