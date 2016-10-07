@@ -10,6 +10,7 @@ import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
@@ -27,13 +28,26 @@ public class XPathTest {
 	    XPathFactory factory = XPathFactory.newInstance();
 	    XPath xpath = factory.newXPath();
 	    System.out.println("Reading list of titles...");
-	    System.out.println("(using xpath = /bookstore/book/title/text()");
-	    XPathExpression expr = xpath.compile("/bookstore/book/title/text()");
+	    System.out.println("(using xpath = /bookstore/book");
+	    System.out.println();
+	    XPathExpression expr = xpath.compile("/bookstore/book");
 
 	    Object result = expr.evaluate(doc, XPathConstants.NODESET);
 	    NodeList nodes = (NodeList) result;
 	    for (int i = 0; i < nodes.getLength(); i++) {
-	        System.out.println(nodes.item(i).getNodeValue());
+	        //System.out.println(nodes.item(i).getNodeValue());
+	    	Element eNodes = (Element) nodes.item(i);
+	    	NodeList tNodes = eNodes.getElementsByTagName("title");
+	    	for (int j = 0; j < tNodes.getLength(); j++) {
+				Element eTitle = (Element) tNodes.item(j);
+				System.out.println("Title: " + eTitle.getTextContent());
+			}
+	    	NodeList aNodes = eNodes.getElementsByTagName("author");
+	    	for (int j = 0; j < aNodes.getLength(); j++) {
+				Element eAuthor = (Element) aNodes.item(j);
+				System.out.println("Author: " + eAuthor.getTextContent());
+			}
+	    	System.out.println("---------------------------------");
 	    }
 
 	  }

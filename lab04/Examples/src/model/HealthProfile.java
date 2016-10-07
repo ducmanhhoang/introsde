@@ -6,14 +6,18 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+import utils.DateTimeHandler;
+
 @XmlRootElement(name="healthprofile")
-@XmlType(propOrder = { "weight", "height", "BMI" })
+@XmlType(propOrder = { "lastupdate", "weight", "height", "BMI" })
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HealthProfile {
+	private String lastupdate;
 	private double weight; // in kg
 	private double height; // in m
 
 	public HealthProfile(double weight, double height) {
+		this.lastupdate = new DateTimeHandler().getTodayDate();
 		this.weight = weight;
 		this.height = height;
 	}
@@ -28,6 +32,7 @@ public class HealthProfile {
 	}
 
 	public void setWeight(double weight) {
+		this.lastupdate = new DateTimeHandler().getTodayDate();
 		this.weight = weight;
 	}
 
@@ -36,6 +41,7 @@ public class HealthProfile {
 	}
 
 	public void setHeight(double height) {
+		this.lastupdate = new DateTimeHandler().getTodayDate();
 		this.height = height;
 	}
 	public String toString() {

@@ -34,4 +34,12 @@ public class StockQuoteService {
     public void update(String symbol, double price) {
         map.put(symbol, new Double(price));
     }
+    
+    public int sum(int a, int b) {
+    	return a + b;
+    }
+    
+    public String hello() {
+    	return "Hello world";
+    }
 }

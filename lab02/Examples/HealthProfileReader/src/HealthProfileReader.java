@@ -73,7 +73,7 @@ public class HealthProfileReader {
 		Person p = database.get(personId);
 		HealthProfile hp = p.gethProfile();
 		System.out.println(p.getFirstname() + " has a weight of "
-				+ hp.getWeight() + " Kg. and a height of " + hp.getHeight());
+				+ hp.getWeight() + " Kg. and a height of " + hp.getHeight() + " and a bmi of " + hp.getBMI());
 	}
 
 	/* Solution to Exercise #01-2d */

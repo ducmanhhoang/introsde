@@ -20,8 +20,8 @@ public class PersonAnnotationBean {
     private String lName;
 	
 	@Mapping("birthdate")
-	@XmlJavaTypeAdapter(type=DateTime.class, value=DateTimeAdapter.class)
-	private DateTime birthdate; 
+	@XmlJavaTypeAdapter(type=DateTimeHandler.class, value=DateTimeAdapter.class)
+	private DateTimeHandler birthdate; 
 
     public String getfName() {
         return fName;
@@ -39,13 +39,13 @@ public class PersonAnnotationBean {
         this.lName = lName;
     }
 
-	public DateTime getBirthdate() {
+	public DateTimeHandler getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(DateTime birthdate) {
+	public void setBirthdate(DateTimeHandler birthdate) {
 		if (birthdate==null) {
-			this.birthdate = new DateTime();
+			this.birthdate = new DateTimeHandler();
 		}
 		this.birthdate = birthdate;
 	}

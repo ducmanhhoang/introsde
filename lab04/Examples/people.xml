@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<people>
+    <person id="1">
+        <firstname>John</firstname>
+        <lastname>Doe</lastname>
+        <birthdate>1985-03-20</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>68.0</weight>
+            <height>1.72</height>
+            <bmi>22.985397512168742</bmi>
+        </healthprofile>
+    </person>
+    <person id="2">
+        <firstname>Yen</firstname>
+        <lastname>Hoang</lastname>
+        <birthdate>2000-04-21</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>60.0</weight>
+            <height>1.2</height>
+            <bmi>41.66666666666667</bmi>
+        </healthprofile>
+    </person>
+    <person id="3">
+        <firstname>Nam</firstname>
+        <lastname>Le</lastname>
+        <birthdate>1988-01-21</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>99.0</weight>
+            <height>2.0</height>
+            <bmi>24.75</bmi>
+        </healthprofile>
+    </person>
+    <person id="4">
+        <firstname>Huong</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>2006-08-12</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>50.0</weight>
+            <height>60.0</height>
+            <bmi>0.013888888888888888</bmi>
+        </healthprofile>
+    </person>
+    <person id="5">
+        <firstname>Thao</firstname>
+        <lastname>Vu</lastname>
+        <birthdate>2003-04-23</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>60.0</weight>
+            <height>1.5</height>
+            <bmi>26.666666666666668</bmi>
+        </healthprofile>
+    </person>
+    <person id="6">
+        <firstname>Luan</firstname>
+        <lastname>Hoang</lastname>
+        <birthdate>2000-06-24</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>62.0</weight>
+            <height>1.3</height>
+            <bmi>36.68639053254437</bmi>
+        </healthprofile>
+    </person>
+    <person id="7">
+        <firstname>Trung</firstname>
+        <lastname>Hoang</lastname>
+        <birthdate>1988-08-10</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>102.0</weight>
+            <height>1.7</height>
+            <bmi>35.294117647058826</bmi>
+        </healthprofile>
+    </person>
+    <person id="8">
+        <firstname>Van</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>1990-01-15</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>93.0</weight>
+            <height>1.9</height>
+            <bmi>25.761772853185597</bmi>
+        </healthprofile>
+    </person>
+    <person id="9">
+        <firstname>Bach</firstname>
+        <lastname>Ngo</lastname>
+        <birthdate>2005-03-19</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>72.0</weight>
+            <height>1.12</height>
+            <bmi>57.397959183673464</bmi>
+        </healthprofile>
+    </person>
+    <person id="10">
+        <firstname>Phuong</firstname>
+        <lastname>Dao</lastname>
+        <birthdate>1993-05-16</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>70.0</weight>
+            <height>1.83</height>
+            <bmi>20.902385858042937</bmi>
+        </healthprofile>
+    </person>
+    <person id="11">
+        <firstname>Phuc</firstname>
+        <lastname>Vu</lastname>
+        <birthdate>1991-07-19</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>123.0</weight>
+            <height>2.0</height>
+            <bmi>30.75</bmi>
+        </healthprofile>
+    </person>
+    <person id="12">
+        <firstname>Quynh</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>1996-09-11</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>69.0</weight>
+            <height>1.7</height>
+            <bmi>23.87543252595156</bmi>
+        </healthprofile>
+    </person>
+    <person id="13">
+        <firstname>Hoi</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>2006-08-22</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>89.0</weight>
+            <height>1.32</height>
+            <bmi>51.078971533516984</bmi>
+        </healthprofile>
+    </person>
+    <person id="14">
+        <firstname>Anh</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>1997-06-18</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>103.0</weight>
+            <height>1.67</height>
+            <bmi>36.9321237763993</bmi>
+        </healthprofile>
+    </person>
+    <person id="15">
+        <firstname>Linh</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>1993-04-15</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>121.0</weight>
+            <height>1.88</height>
+            <bmi>34.23494794024446</bmi>
+        </healthprofile>
+    </person>
+    <person id="16">
+        <firstname>Vinh</firstname>
+        <lastname>Ngo</lastname>
+        <birthdate>1998-02-17</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>90.0</weight>
+            <height>1.78</height>
+            <bmi>28.40550435551067</bmi>
+        </healthprofile>
+    </person>
+    <person id="17">
+        <firstname>Lan</firstname>
+        <lastname>Ngo</lastname>
+        <birthdate>1984-01-19</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>78.0</weight>
+            <height>1.65</height>
+            <bmi>28.650137741046834</bmi>
+        </healthprofile>
+    </person>
+    <person id="18">
+        <firstname>Loan</firstname>
+        <lastname>Nguyen</lastname>
+        <birthdate>1985-05-23</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>80.0</weight>
+            <height>1.7</height>
+            <bmi>27.68166089965398</bmi>
+        </healthprofile>
+    </person>
+    <person id="19">
+        <firstname>Diep</firstname>
+        <lastname>Tran</lastname>
+        <birthdate>1994-03-16</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>65.0</weight>
+            <height>1.64</height>
+            <bmi>24.167162403331353</bmi>
+        </healthprofile>
+    </person>
+    <person id="20">
+        <firstname>Tuan</firstname>
+        <lastname>Le</lastname>
+        <birthdate>1992-07-18</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>85.0</weight>
+            <height>1.79</height>
+            <bmi>26.528510346119035</bmi>
+        </healthprofile>
+    </person>
+    <person id="21">
+        <firstname>Tuong</firstname>
+        <lastname>Nong</lastname>
+        <birthdate>1986-09-20</birthdate>
+        <healthprofile>
+            <lastupdate>2016-10-03</lastupdate>
+            <weight>97.0</weight>
+            <height>1.9</height>
+            <bmi>26.869806094182827</bmi>
+        </healthprofile>
+    </person>
+</people>

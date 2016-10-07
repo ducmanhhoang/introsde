@@ -8,7 +8,7 @@ public class Person {
     private String lastName;
     private String address;
     private String dbID;
-    private DateTime birthdate;
+    private DateTimeHandler birthdate;
   
     public String getFirstName() {
         return firstName;
@@ -42,11 +42,11 @@ public class Person {
         this.dbID = dbID;
     }
 
-	public DateTime getBirthdate() {
+	public DateTimeHandler getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(DateTime birthdate) {
+	public void setBirthdate(DateTimeHandler birthdate) {
 		this.birthdate = birthdate;
 	}
 	

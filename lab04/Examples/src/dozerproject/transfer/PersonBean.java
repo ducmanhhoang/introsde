@@ -17,8 +17,8 @@ public class PersonBean {
 	private String lName;
 	private String address;
 	
-	@XmlJavaTypeAdapter(type=DateTime.class, value=DateTimeAdapter.class)
-	private DateTime birthdate; 
+	@XmlJavaTypeAdapter(type=DateTimeHandler.class, value=DateTimeAdapter.class)
+	private DateTimeHandler birthdate; 
 
     public String getfName() {
         return fName;
@@ -44,11 +44,11 @@ public class PersonBean {
         this.address = address;
     }
 
-	public DateTime getBirthdate() {
+	public DateTimeHandler getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(DateTime birthdate) {
+	public void setBirthdate(DateTimeHandler birthdate) {
 		this.birthdate = birthdate;
 	}    
 	

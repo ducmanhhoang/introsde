@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service name="HealthProfileReader" scope="application" targetNamespace="http://journaldev.com/">
+	<description>HealthProfileReader</description>
+	<messageReceivers>
+		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+			class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+		<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+			class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+	</messageReceivers>
+	<operation name="main" >
+        <messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+    <operation name="createPerson" >
+        <messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>  
+    <operation name="displayHealthProfile" >
+        <messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation>
+    <operation name="updateHealthProfile" >
+        <messageReceiver  mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+    </operation> 
+	<schema schemaNamespace="http://journaldev.com/xsd" />
+	<parameter name="ServiceClass">HealthProfileReader</parameter>
+</service>

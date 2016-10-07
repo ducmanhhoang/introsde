@@ -18,7 +18,7 @@ public class DozerMapperTest {
         p.setLastName("Parra");
         p.setAddress("Povo Trento");
         p.setDbID("1234");
-        p.setBirthdate(new DateTime(1984, 6, 21, 18, 0, 0, 0));
+        p.setBirthdate(new DateTimeHandler(1984, 6, 21, 18, 0, 0, 0));
         System.out.println("--> Person = "+p.toString());
         
         System.out.println("Mapping the test person to the transfer beans...");

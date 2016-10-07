@@ -1,6 +1,41 @@
 <?xml version="1.0"?>
-<project name="myFirstANTProject" default="compile" basedir=".">
+<project name="HealthProfileReader" default="deploy" basedir=".">
+	
+	<property environment="env"/>
+	<property name="build.dir" value="build"/>
+	<property name="axis2.dir" value="/home/hoangducmanh/axis2-1.7.3"/>
+	<property name="tomcat.dir" value="/home/hoangducmanh/apache-tomcat-9.0.0.M10"/>
+	
+	<path id="axis2.classpath">
+		<fileset dir="${axis2.dir}/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="compile">
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.dir}/classes"/>
+		<mkdir dir="${build.dir}/resources"/>
+		<javac debug="on" fork="true" destdir="${build.dir}/classes" srcdir="${basedir}/src" classpathref="axis2.classpath">
+		</javac>
+	</target>
+	
+	<target name="deploy" depends="compile">
+		<copy toDir="${build.dir}/classes" failonerror="false">
+			<fileset dir="${basedir}/resources">
+				<include name="**/*.xml"/>
+			</fileset>
+		</copy>
+		<jar destfile="${build.dir}/HealthProfileReader.aar">
+			<fileset excludes="**/Test.class" dir="${build.dir}/classes"></fileset>
+		</jar>
+		<copy file="${build.dir}/HealthProfileReader.aar" toDir="${axis2.dir}/repository/services" overwrite="yes">
+		</copy>
+		<copy file="${build.dir}/HealthProfileReader.aar" toDir="${tomcat.dir}/WEB-INF/services" overwrite="yes">
+		</copy>
+	</target>
 
+	<!--
     <property name="BuildDir" value="build"/>
 
     <target name="init">
@@ -8,7 +43,7 @@
         <mkdir dir="${BuildDir}" />
         <echo message="${BuildDir} has been created"/>
     </target>
-    <target name="compile" depends="init">
+    <target name="compile" depends="compile-person">
         <echo message="Compile target has been called"/>
         <javac srcdir="src" destdir="${BuildDir}" />
     	<java classname="HealthProfileReader" classpath="build">
@@ -59,4 +94,6 @@
             <arg value="${birthdate}"/>
         </java>
     </target>
+    -->
+	
 </project>
